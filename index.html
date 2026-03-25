@@ -148,6 +148,154 @@ Contact Us
 
 <section>
 
+<!-- ===== Button to open Pricing Modal ===== -->
+<div style="text-align: center; margin: 30px 0;">
+  <button id="openPricingBtn" class="btn">View Pricing</button>
+</div>
+
+<!-- ===== Pricing Modal ===== -->
+<div id="pricingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>📊 Bookkeeping Services Pricing</h2>
+    <p class="subtitle">Transparent, professional accounting plans to fit your business needs.</p>
+    <div class="plans-container">
+      <!-- Basic Plan -->
+      <div class="plan-card">
+        <h3>Basic</h3>
+        <p class="price">$50<span>/month</span></p>
+        <ul>
+          <li>Monthly bookkeeping</li>
+          <li>Invoice entry</li>
+          <li>Simple reports</li>
+        </ul>
+        <p class="tagline">Ideal for freelancers & startups</p>
+      </div>
+
+      <!-- Professional Plan -->
+      <div class="plan-card featured">
+        <h3>Professional</h3>
+        <p class="price">$120<span>/month</span></p>
+        <ul>
+          <li>All Basic services</li>
+          <li>Monthly financial analysis</li>
+          <li>Tax advice</li>
+        </ul>
+        <p class="tagline">Perfect for small & medium businesses</p>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="plan-card">
+        <h3>Premium</h3>
+        <p class="price">$250<span>/month</span></p>
+        <ul>
+          <li>All Professional services</li>
+          <li>Real-time financial monitoring</li>
+          <li>Dedicated financial advisor</li>
+        </ul>
+        <p class="tagline">For growing or large businesses</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== About Section ===== -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>Learn more about our mission and team.</p>
+</section>
+
+<!-- ===== Styles ===== -->
+<style>
+/* General Button */
+.btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover { background: #2563eb; }
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 50px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #f9fafc;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  right: 20px; top: 15px;
+  color: #111827;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover { color: #3b82f6; }
+
+/* Fade-in animation */
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+/* Pricing Cards */
+.plans-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+.plan-card { background: #fff; border-radius: 15px; padding: 25px 20px; width: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+.plan-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.12); }
+.plan-card h3 { font-size: 1.5rem; margin-bottom: 12px; color: #111827; }
+.price { font-size: 2rem; font-weight: bold; margin: 15px 0; color: #111827; }
+.price span { font-size: 1rem; color: #6b7280; }
+ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; }
+ul li { padding: 8px 0; border-bottom: 1px solid #e5e7eb; color: #374151; }
+.tagline { font-style: italic; color: #6b7280; margin-top: 10px; }
+.featured { border: 2px solid #3b82f6; transform: scale(1.05); }
+
+/* Responsive */
+@media (max-width: 900px) { .plan-card { width: 90%; margin-bottom: 20px; } }
+</style>
+
+<!-- ===== Scripts ===== -->
+<script>
+// Get modal elements
+var modal = document.getElementById("pricingModal");
+var btn = document.getElementById("openPricingBtn");
+var span = document.getElementsByClassName("close")[0];
+
+// Open modal
+btn.onclick = function() { modal.style.display = "block"; }
+
+// Close modal on X click
+span.onclick = function() { modal.style.display = "none"; }
+
+// Close modal on outside click
+window.onclick = function(event) {
+  if (event.target == modal) { modal.style.display = "none"; }
+}
+</script>
+
+
+  
 <h2>About</h2>
 
 <div class="about">
